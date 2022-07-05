@@ -1,0 +1,14 @@
+name: Build website
+
+on: [push]
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      # 1/ Récupérer mes sources
+      # 2/ Créer une archive de mon code source
+      - name: récupération des sources (git clone)
+        uses: actions/checkout@v3
+      - name: Compression de mon site web
+        run: tar cfz mon-site-web.tar.gz ./src/
