@@ -14,7 +14,7 @@ jobs:
         run: tar cfz mon-site-web.tar.gz ./src/
       # 3/ Sauvegarder le résultat de ma commande précédente via un artefact
       - name: Sauvegarde de l'archive en tant qu'artefact
-        users: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: website-source
           path: mon-site-web.tar.gz
